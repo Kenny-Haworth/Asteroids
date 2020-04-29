@@ -30,7 +30,7 @@ recharge_time = 0.35
 [node name="Level" type="Node2D" parent="." index="3"]
 
 script = ExtResource( 4 )
-level = 5
+level = -1
 safeRadius = 250
 minAsteroids = 5
 maxSpeed = 100

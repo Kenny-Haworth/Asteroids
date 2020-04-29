@@ -2,7 +2,7 @@
 
 **Asteroids** is a video game containing both a copy of [the classic arcade game Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) and a variant version with modern graphics and powerups.
 
-![Home Screen of Project](https://github.com/Kenny-Haworth/Digital-Journal/blob/master/Screenshots/Home%20Screen%20with%20Memories.PNG)
+![Main Menu](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Main%20Menu.png)
 
 ## Table of Contents
 1. [Features](#Features)
@@ -20,33 +20,25 @@
   - Extra life for every 10,000 points
   - Every level (each time all asteroids are cleared from the screen) increases the number of spawned asteroids by 1
 - A variant version of Asteroids
-  - Same as the classic version with the additions of temporary...
-    - Powerups
-	  - Missiles do not despawn after a certain distance
-	    - ![Delay](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Delay.png)
-	  - Extra life
-	    - ![ExtraLife](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/ExtraLife.png)
-	  - Score x5
-	    - ![FiveTimes](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/FiveTimes.png)
-	  - Missile circle burst around the ship
-	    - ![MissileCircle](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/MissileCircle.png)
-	  - Rapid fire missiles
-	    - ![RapidFire](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/RapidFire.png)
-	  - Legendary powerup - activates all of the above powerups at once, and gives additional rotational thrust
-	    - ![Legendary](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Legendary.png)
-	- Debuffs
-	  - Asteroid speed x5
-	    - ![Asteroids](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Asteroids.png)
-	  - Controls become jumbled
-	    - ![BadControls](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/BadControls.png)
-	  - Your ship becomes invisible
-	    - ![Invisible](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Invisible.png)
-	  - You lose a life (does nothing if you are already on your last life)
-	    - ![LoseALife](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/LoseALife.png)
-	  - Missiles are jammed (unable to fire)
-	    - ![NoMissile](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/NoMissile.png)
-	  - Ship thrusts uncontrollably
-	    - ![MaximumOverdrive](https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/MaximumOverdrive.png)
+  - Same as the classic version with the additions of temporary powerups
+	
+|       Buffs      | Icon                                                                                                                               | Description |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------- |
+| No Despawn       | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/Delay.png" width="100" height="100">         | Missiles do not despawn after a certain distance |
+| Extra life       | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/ExtraLife.png" width="100" height="100">     | Grants the player an extra life |                                                               
+| Score x5         | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/FiveTimes.png" width="100" height="100">     | Multiplies all points gained by 5 |
+| Burst            | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/MissileCircle.png" width="100" height="100"> | 3x missile circle burst around the ship |
+| Rapid Fire       | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/RapidFire.png" width="100" height="100">     | No delay on firing |
+| Legendary        | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/Legendary.png" width="100" height="100">     | Activates all of the above powerups at once and grants additional rotational thrust |
+    
+|      Debuffs     | Icon                                                                                                                                  | Description |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------- |
+| Asteroid Speedup | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/Asteroids.png" width="100" height="100">        | Speed of all asteroids increases x5 |
+| Jumbled Controls | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/BadControls.png" width="100" height="100">      | Controls become jumbled |
+| Invisible Ship   | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/Invisible.png" width="100" height="100">        | Your ship becomes invisible |
+| Lose a Life      | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/LoseALife.png" width="100" height="100">        | Lose a life (does nothing if the player is on their last life) |
+| Jammed Missiles  | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/NoMissile.png" width="100" height="100">        | The player is unable to fire |
+| Maximum Thrust   | <img src="https://github.com/Kenny-Haworth/Asteroids/blob/master/Screenshots/Powerups/MaximumOverdrive.png" width="100" height="100"> | The ship thrusts uncontrollably |
 
 <a name="Controls"></a>
 ## Controls
@@ -79,7 +71,7 @@ This game was created for a game development class I took in college along with 
 
 - Justin Tok
   - Created the custom graphics for the powerups, debuffs, and cleaned up the asteroid graphics.
-- Kenneth-Matthew Velarde
-  - Designed the main menu.
 - Andrew Wood
   - Fixed various programming bugs and implemented some of the powerups.
+- Kenneth-Matthew Velarde
+  - Designed the main menu.

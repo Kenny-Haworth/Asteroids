@@ -32,8 +32,10 @@ func _process(delta):
 			levelComplete.stream = load("res://sounds/levelComplete.wav")
 			levelComplete.volume_db = -20
 			levelComplete.play()
-	
+		
+		print(level)
 		level += 1
+		print(level)
 		var avoid = ship.position
 		var viewport = get_viewport().get_visible_rect().size
 		
@@ -41,12 +43,13 @@ func _process(delta):
 			var child
 			
 			child = AsteroidLarge.instance()
+			
 				
 			var where = avoid
 			while (where - avoid).length() <= safeRadius: #spawns asteroids around the player, not near them
 				where.x = rand_range(0, viewport.x)
 				where.y = rand_range(0, viewport.y)
-				pass
+			
 			child.position = where
 			
 			var angle = randi() * PI * 2
@@ -54,8 +57,6 @@ func _process(delta):
 			child.linear_velocity = Vector2(speed, 0).rotated(angle)
 			
 			add_child(child)
-			pass
-		pass
 		
 	if (get_child_count() != currentAsteroidCount): #checks if an asteroid has been destroyed
 		currentAsteroidCount = get_child_count()
