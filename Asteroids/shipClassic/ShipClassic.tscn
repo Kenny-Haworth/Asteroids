@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://shipClassic/ShipClassic.gd" type="Script" id=1]
+[ext_resource path="res://shipClassic/shippClassic.png" type="Texture" id=2]
+
+[node name="Ship" type="RigidBody2D" index="0"]
+
+position = Vector2( 249.938, 142.646 )
+rotation = 3.14159
+z_index = 2
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+mode = 0
+mass = 0.5
+friction = 0.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+acceleration = 7
+max_speed = 0.0008
+spin_thrust = 4
+missile_speed = 550
+recharge_time = 0.2
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Region", "Transform", "Z Index" ]
+
+[node name="Collider" type="CollisionPolygon2D" parent="." index="1"]
+
+position = Vector2( -1.59105, -0.596634 )
+rotation = 3.14159
+build_mode = 0
+polygon = PoolVector2Array( 20.6308, -15.476, -22.1286, -1.25615, -22.228, 0.0365753, 21.7438, 14.0916, 22.0572, 12.8382, 12.3772, 9.88127, 12.2778, -10.8023, 21.128, -13.9844 )
+_sections_unfolded = [ "Transform" ]
+
+

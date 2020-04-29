@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://asteroid/Asteroid.gd" type="Script" id=1]
+[ext_resource path="res://asteroid/asteroid3.png" type="Texture" id=2]
+
+[node name="Asteroid" type="RigidBody2D"]
+
+position = Vector2( 389.034, 219.732 )
+z_index = 1
+input_pickable = false
+collision_layer = 1
+collision_mask = 6
+mode = 0
+mass = 1.0
+friction = 0.0
+bounce = 1.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 200, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+explode_force = 0
+size = 0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 0.282824, 0.0896099 )
+scale = Vector2( 0.286889, 0.293171 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -2.4353, -10.4143, 5.35046, -10.4604, 10.5564, -3.04315, 10.5564, 0.642441, 2.8627, 10.3632, -2.29712, 10.3171, -1.19144, 1.79417, -5.7984, 10.4092, -10.0368, 2.16273, -5.29166, -0.278961, -9.99075, -2.44424 )
+
+

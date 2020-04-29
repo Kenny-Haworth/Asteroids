@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://background/BackgroundModern.jpg" type="Texture" id=1]
+[ext_resource path="res://ship/Ship.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://level/Level.gd" type="Script" id=4]
+[ext_resource path="res://sounds/backgroundMusic.wav" type="AudioStream" id=5]
+[ext_resource path="res://Title_screen/PauseFunction.tscn" type="PackedScene" id=6]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 512, 300 )
+scale = Vector2( 0.55, 0.55 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ship" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 529.177, 290.509 )
+rotation = 4.71239
+collision_mask = 1
+linear_velocity = Vector2( 1, 0 )
+max_speed = 500
+recharge_time = 0.35
+
+[node name="UI" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Level" type="Node2D" parent="." index="3"]
+
+script = ExtResource( 4 )
+level = 5
+safeRadius = 250
+minAsteroids = 5
+maxSpeed = 100
+minSpeed = 100
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 5 )
+volume_db = -25.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="CanvasLayer" parent="." index="5" instance=ExtResource( 6 )]
+
+

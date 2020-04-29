@@ -1,0 +1,157 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Title_screen/go_to_game.gd" type="Script" id=1]
+[ext_resource path="res://background/background3.jpg" type="Texture" id=2]
+[ext_resource path="res://Title_screen/Asteroids_temp.png" type="Texture" id=3]
+[ext_resource path="res://Title_screen/Buttons/Asteroids_Twist.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Title_screen/Buttons/Classic Asteroids.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Title_screen/Buttons/Credits.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Title_screen/fadein/Fade_In.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Title_screen/Asteroid_temp2.png" type="Texture" id=8]
+
+[node name="Title" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Theme" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 509.502, 299.926 )
+rotation = 3.14159
+scale = Vector2( 0.365722, 0.337373 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="Menu" type="VBoxContainer" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 70.0
+margin_top = 80.0
+margin_right = 1024.0
+margin_bottom = 560.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Logo" type="TextureRect" parent="Menu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 954.0
+margin_bottom = 134.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 4
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect" ]
+
+[node name="Center" type="HBoxContainer" parent="Menu" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 138.0
+margin_right = 954.0
+margin_bottom = 480.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+alignment = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Rect" ]
+
+[node name="Play_buttons" type="VBoxContainer" parent="Menu/Center" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 954.0
+margin_bottom = 342.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Asteroids_Twist" parent="Menu/Center/Play_buttons" index="0" instance=ExtResource( 4 )]
+
+margin_top = 61.0
+margin_right = 954.0
+margin_bottom = 121.0
+scene_to_load = "res://AsteroidsVariant.tscn"
+
+[node name="Classic_Asteroids" parent="Menu/Center/Play_buttons" index="1" instance=ExtResource( 5 )]
+
+margin_top = 141.0
+margin_right = 954.0
+margin_bottom = 201.0
+scene_to_load = "res://AsteroidsClassicClassic.tscn"
+
+[node name="Credits" parent="Menu/Center/Play_buttons" index="2" instance=ExtResource( 6 )]
+
+margin_top = 221.0
+margin_right = 954.0
+margin_bottom = 281.0
+scene_to_load = "res://Title_screen/Buttons/Credits_page.tscn"
+
+[node name="FadeIn" parent="." index="2" instance=ExtResource( 7 )]
+
+visible = false
+margin_left = -2.0
+margin_top = 1.0
+margin_right = -2.0
+margin_bottom = 1.0
+
+[node name="Screen Shot 2019-03-22 at 11.41.52 PM" type="Sprite" parent="." index="3"]
+
+position = Vector2( 514.7, 143.1 )
+scale = Vector2( 0.509101, 0.722222 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Offset" ]
+
+[connection signal="pressed" from="Menu/Center/Play_buttons/Asteroids_Twist" to="." method="_on_Asteroids_Twist_pressed"]
+
+[connection signal="pressed" from="Menu/Center/Play_buttons/Classic_Asteroids" to="." method="_on_Classic_Asteroids_pressed"]
+
+[connection signal="pressed" from="Menu/Center/Play_buttons/Credits" to="." method="_on_Credits_pressed"]
+
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gunJam.wav-fec41314ea9cee4f46851fa1e6e73356.sample"
+
+[deps]
+
+source_file="res://sounds/gunJam.wav"
+dest_files=[ "res://.import/gunJam.wav-fec41314ea9cee4f46851fa1e6e73356.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

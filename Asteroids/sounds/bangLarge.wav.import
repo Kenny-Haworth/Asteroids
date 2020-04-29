@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bangLarge.wav-b228ae3af7d09a60807c6e191c343113.sample"
+
+[deps]
+
+source_file="res://sounds/bangLarge.wav"
+dest_files=[ "res://.import/bangLarge.wav-b228ae3af7d09a60807c6e191c343113.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

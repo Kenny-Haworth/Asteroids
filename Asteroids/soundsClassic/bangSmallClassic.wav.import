@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bangSmallClassic.wav-8130622f81f49f6d889c0d01be35ec4e.sample"
+
+[deps]
+
+source_file="res://soundsClassic/bangSmallClassic.wav"
+dest_files=[ "res://.import/bangSmallClassic.wav-8130622f81f49f6d889c0d01be35ec4e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

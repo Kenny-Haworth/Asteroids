@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Title_screen/Buttons/Menu_button_.tscn" type="PackedScene" id=1]
+
+[node name="Asteroids_Twist" instance=ExtResource( 1 )]
+
+text = "Asteroids Variant"
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+scene_to_load = "res://AsteroidsMod.tscn"
+
+

@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ship/Ship.gd" type="Script" id=1]
+[ext_resource path="res://ship/spaceShips_004.png" type="Texture" id=2]
+
+[node name="Ship" type="RigidBody2D"]
+
+position = Vector2( 240.399, 152.147 )
+rotation = 3.14159
+z_index = 2
+input_pickable = false
+collision_layer = 2
+collision_mask = 9
+mode = 0
+mass = 0.5
+friction = 0.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Transform", "Visibility", "Z Index" ]
+acceleration = 7
+max_speed = 0.0008
+spin_thrust = 4
+missile_speed = 550
+recharge_time = 0.3
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( -4.71031, 0.628039 )
+rotation = 4.71239
+scale = Vector2( 0.4, 0.45 )
+z_index = 1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collider" type="CollisionPolygon2D" parent="." index="1"]
+
+position = Vector2( -5.15001, 2.02019 )
+rotation = 1.5708
+scale = Vector2( 0.9, 0.9 )
+build_mode = 0
+polygon = PoolVector2Array( 8.26218, -27.497, 13.9953, -27.2922, 14.1489, -25.0399, 16.7595, -26.7803, 23.1069, -17.464, 26.1747, -12.0616, 26.383, -3.02875, 25.2569, 2.1925, 23.1581, 7.41376, 23.1069, 12.3791, 21.0594, 15.5016, 18.6024, 15.8599, 18.3976, 25.1251, 17.4762, 26.5071, 12.2549, 26.6095, 10.4633, 25.2274, 10.4122, 15.8087, 7.75034, 15.8087, 5.6516, 13.3517, -0.542236, 19.2896, -2.07791, 19.2896, -8.067, 13.0957, -10.3705, 15.604, -13.5954, 15.604, -13.6977, 24.7156, -15.0798, 26.456, -20.2499, 26.7631, -22.0415, 24.9716, -21.9903, 15.9623, -23.4236, 15.9623, -26.1878, 12.7886, -26.1366, 7.15787, -28.3377, 2.24374, -29.4875, -2.02795, -29.6687, -10.6046, -28.4402, -14.4438, -23.0141, -22.634, -20.1476, -26.8315, -18.919, -26.6779, -17.0251, -25.1934, -16.8715, -27.5993, -10.3705, -27.5993, -10.2681, -22.4804, -11.036, -22.4804, -11.036, -16.9008, -10.1146, -16.4402, -10.3193, -11.4237, -12.1621, -11.4237, -12.2645, -8.86423, -6.17303, -13.0617, 3.1945, -12.9081, 9.03004, -9.12018, 9.08122, -11.3725, 7.64793, -11.3213, 7.49437, -15.9795, 8.7229, -17.0033, 8.67169, -22.1222, 7.54555, -23.1459, 7.59673, -26.9339 )
+_sections_unfolded = [ "Transform" ]
+
+

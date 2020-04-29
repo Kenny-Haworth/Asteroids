@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://backgroundClassic/backgroundClassic.jpg" type="Texture" id=1]
+[ext_resource path="res://shipClassic/ShipClassic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://uiClassic/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levelClassic/LevelClassic.gd" type="Script" id=4]
+[ext_resource path="res://Title_screen/PauseFunction.tscn" type="PackedScene" id=5]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 512.884, 300.671 )
+scale = Vector2( 0.641293, 0.67242 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ship" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 501.379, 281.243 )
+rotation = 4.71239
+max_speed = 500
+recharge_time = 0.35
+
+[node name="UI" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Level" type="Node2D" parent="." index="3"]
+
+script = ExtResource( 4 )
+level = -1
+safeRadius = 250
+minAsteroids = 5
+maxSpeed = 100
+minSpeed = 100
+
+[node name="CanvasLayer" parent="." index="4" instance=ExtResource( 5 )]
+
+

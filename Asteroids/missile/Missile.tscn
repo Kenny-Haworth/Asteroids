@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://missile/Missile.gd" type="Script" id=1]
+[ext_resource path="res://missile/spaceMissiles_001.png" type="Texture" id=2]
+
+[node name="Missile" type="RigidBody2D"]
+
+position = Vector2( 218.881, 105.341 )
+input_pickable = false
+collision_layer = 4
+collision_mask = 1
+mode = 0
+mass = 0.1
+friction = 0.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+rotation = 1.5708
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+rotation = 1.5708
+build_mode = 0
+polygon = PoolVector2Array( -0.71698, -8.57797, 0.765854, -8.6229, 1.52972, -7.54449, 2.47334, -5.74712, 2.67555, -4.57883, 2.56322, 1.98156, 5.03459, 4.63268, 5.03459, 6.02563, 4.09097, 6.60979, 2.11388, 6.78952, 2.06894, 8.27235, 1.64206, 8.74416, -1.57072, 8.69922, -1.9976, 8.13754, -1.97514, 6.74458, -4.53639, 6.40758, -5.07559, 5.86837, -5.07559, 4.54281, -2.42448, 1.75689, -2.60422, -4.7361, -1.79539, -6.7806 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+
